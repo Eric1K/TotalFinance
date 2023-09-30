@@ -25,9 +25,20 @@
           <img class="mx-auto h-10 w-auto" src="../images/m1-2.png" alt="Your Company">
           <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Register for an Account</h2>
         </div>
-      
+        
+        
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form class="space-y-6" action="#" method="POST">
+
+            <div>
+                <div class="flex items-center justify-between">
+                    <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Full Name</label>
+                </div>
+                <div class="mt-2">
+                    <input id="name" name="name" type="text" autocomplete="name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6">
+                </div>
+            </div>
+
             <div>
               <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
               <div class="mt-2">
@@ -51,16 +62,37 @@
                 <div class="mt-2">
                   <input id="confirmpassword" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6">
                 </div>
-              </div>
-      
-            <div>
-              <button type="submit" class="flex w-full justify-center rounded-md bg-blue-900 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-900">Register</button>
             </div>
+            
+            <div>
+                <div class="flex items-center justify-between">
+                    <label for="phonenumber" class="block text-sm font-medium leading-6 text-gray-900">Phone Number (optional)</label>
+                </div>
+                <div class="mt-2">
+                    <input id="phonenumber" name="phonenumber" type="tel" autocomplete="tel" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6">
+                </div>
+            </div>
+
+            <div class="mt-6">
+                <div class="flex items-center justify-between">
+                    <label for="birthdate" class="block text-sm font-medium leading-6 text-gray-900">Date of Birth</label>
+                </div>
+                <div class="mt-2">
+                    <input id="birthdate" name="birthdate" type="date" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6">
+                </div>
+            </div>
+
+            <div>
+              <button type="submit" class="flex w-full justify-center rounded-md bg-blue-900 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-900">Create Account</button>
+            </div>
+
+            
           </form>
-      
+          
+
           <p class="mt-10 text-center text-sm text-gray-500">
             Already have an account?
-            <a href="#" class="font-semibold leading-6 text-blue-900 hover:text-blue-800">Sign in</a>
+            <a href="login.html" class="font-semibold leading-6 text-blue-900 hover:text-blue-800">Sign in</a>
           </p>
         </div>
       </div>
