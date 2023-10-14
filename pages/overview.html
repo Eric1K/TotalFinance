@@ -45,10 +45,15 @@
             <!-- Profile dropdown -->
             <div class="relative ml-3">
               <div>
-                <button type="button" class="relative flex max-w-xs items-center rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <button type="button" class="relative flex max-w-xs items-center rounded-full bg-white text-sm text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                   <span class="absolute -inset-1.5"></span>
                   <span class="sr-only">Open user menu</span>
-                  <img id = "user-menu-button" class="h-8 w-8 rounded-full" src="../images/person.png" alt="">
+                  <!-- <img id = "user-menu-button" class="h-8 w-8 rounded-full" src="../images/person.png" alt=""> -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                  </svg>
                   <!-- <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""> -->
                 </button>
               </div>
@@ -101,7 +106,12 @@
         <div class="border-t border-gray-200 pb-3 pt-4">
           <div class="flex items-center px-4">
             <div class="flex-shrink-0">
-              <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                  </svg>
+              <!-- <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""> -->
             </div>
             <div class="ml-3">
               <div class="text-base font-medium text-gray-800">Tom Cook</div>
@@ -124,7 +134,7 @@
       </div>
     </nav>
     
-    <div class="flex flex-col sm:flex-row">
+    <div class="flex flex-col sm:flex-row lg:px-32 md: px-6 sm:px-6">
       <!-- left side -->
       <div class="py-10 mx-auto lg:w-1/2">
         <div class="flex sm:flex-row px-4 sm:px-6 lg:px-8 sm:items-center">
@@ -138,7 +148,7 @@
 
         <!-- Pie Chart -->
         <div class = "items-center justify-center mt-3">   
-          <div class="max-w-sm mx-auto w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
+          <div class="max-w-sm mx-auto w-full bg-white rounded-lg shadow-md ring-1 ring-gray-900/10 dark:bg-gray-800 p-4 md:p-6">
             <div class="flex justify-between items-start w-full">
                 <div class="flex-col items-center">
                   <div class="flex items-center mb-1">
@@ -349,11 +359,68 @@
           <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900">5 Year Predictions:</h1>
           <h2 class="text-xl font-bold leading-tight tracking-tight text-gray-900 sm:inline">&nbsp;$50,000</h2>
         </div>
+
+        <div class="lg:px-10 mt-12 justify-center items-center">
+          <div class="bg-white mx-auto p-4 rounded-lg shadow-md ring-1 ring-gray-900/10">
+              <h1 class="text-2xl text-center font-semibold text-gray-900 mt-2">AI Financial Advisor</h1>
+              <div class="chat-container">
+                  <div class="chat p-2 lg:mt-56 mt-16 space-y-2">
+                      <div class="chat-message user text-right">
+                          <div class="message-text bg-blue-900 text-white py-2 px-3 rounded-t-lg inline-block">
+                              Hello, Moneyverse!
+                          </div>
+                      </div>
+                      <div class="chat-message bot">
+                          <div class="message-text bg-gray-200 py-2 px-3 rounded-t-lg inline-block">
+                              Hi there! How can I assist you today?
+                          </div>
+                      </div>
+                      <!-- copy and paste more chat messages here -->
+                  </div>
+                  <div class="user-input mt-4">
+                      <input type="text" id="user-message" placeholder="Ask a question..." class="w-5/6 py-2 px-3 border rounded-l-lg" />
+                      <button id="send-button" class="bg-blue-900 hover:bg-blue-800 text-white py-2 px-3 rounded-r-lg">Send</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
       </div>
       
     </div>
-        
-    <div class="py-10">
+      
+    <footer class="bg-white" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" class="sr-only">Footer</h2>
+      <!-- sm:pt-24 lg:px-8 lg:pt-32 -->
+      <div class="mx-auto max-w-7xl px-6 pb-8 pt-20 sm:pt-12 lg:px-8 lg:pt-12">
+        <!-- sm:pt-8 -->
+        <div class="border-t border-gray-900/10 pt-8 sm:mt-8 md:flex md:items-center md:justify-between">
+          <div class="flex space-x-6 md:order-2">
+            <a href="#EMAIL" class="text-gray-400 hover:text-gray-500">
+              <span class="sr-only">Email</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
+                <path d="M3 7l9 6l9 -6"></path>
+             </svg>
+            </a>
+            <a href="tel:774-275-4907" class="text-gray-400 hover:text-gray-500">
+              <span class="sr-only">Phone</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
+             </svg> 
+            </a>
+      
+          </div>
+          <p class="mt-8 text-xs leading-5 text-gray-500 md:order-1 md:mt-0">&copy; 2023 Moneyverse AI. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    
+    
+    <!-- <div class="py-10">
       <header>
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 class="text-3xl font-bold leading-tight tracking-tight text-gray-900">Dashboard</h1>
@@ -361,86 +428,85 @@
       </header>
       <main>
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <!-- Your content -->
           
-        </div>
+    </div> -->
 
-<script>
-  // ApexCharts options and config
-  window.addEventListener("load", function() {
-    let options = {
-      chart: {
-        height: "100%",
-        maxWidth: "100%",
-        type: "area",
-        fontFamily: "Inter, sans-serif",
-        dropShadow: {
-          enabled: false,
-        },
-        toolbar: {
-          show: false,
-        },
-      },
-      tooltip: {
-        enabled: true,
-        x: {
-          show: false,
-        },
-      },
-      fill: {
-        type: "gradient",
-        gradient: {
-          opacityFrom: 0.55,
-          opacityTo: 0,
-          shade: "#1C64F2",
-          gradientToColors: ["#1C64F2"],
-        },
-      },
-      dataLabels: {
-        enabled: false,
-      },
-      stroke: {
-        width: 6,
-      },
-      grid: {
-        show: false,
-        strokeDashArray: 4,
-        padding: {
-          left: 2,
-          right: 2,
-          top: 0
-        },
-      },
-      series: [
-        {
-          name: "New users",
-          data: [6500, 6418, 6456, 6526, 6356, 6456],
-          color: "#1A56DB",
-        },
-      ],
-      xaxis: {
-        categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
-        labels: {
-          show: false,
-        },
-        axisBorder: {
-          show: false,
-        },
-        axisTicks: {
-          show: false,
-        },
-      },
-      yaxis: {
-        show: false,
-      },
-    }
+    <script>
+      // ApexCharts options and config
+      window.addEventListener("load", function() {
+        let options = {
+          chart: {
+            height: "100%",
+            maxWidth: "100%",
+            type: "area",
+            fontFamily: "Inter, sans-serif",
+            dropShadow: {
+              enabled: false,
+            },
+            toolbar: {
+              show: false,
+            },
+          },
+          tooltip: {
+            enabled: true,
+            x: {
+              show: false,
+            },
+          },
+          fill: {
+            type: "gradient",
+            gradient: {
+              opacityFrom: 0.55,
+              opacityTo: 0,
+              shade: "#1C64F2",
+              gradientToColors: ["#1C64F2"],
+            },
+          },
+          dataLabels: {
+            enabled: false,
+          },
+          stroke: {
+            width: 6,
+          },
+          grid: {
+            show: false,
+            strokeDashArray: 4,
+            padding: {
+              left: 2,
+              right: 2,
+              top: 0
+            },
+          },
+          series: [
+            {
+              name: "New users",
+              data: [6500, 6418, 6456, 6526, 6356, 6456],
+              color: "#1A56DB",
+            },
+          ],
+          xaxis: {
+            categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
+            labels: {
+              show: false,
+            },
+            axisBorder: {
+              show: false,
+            },
+            axisTicks: {
+              show: false,
+            },
+          },
+          yaxis: {
+            show: false,
+          },
+        }
 
-    if (document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') {
-      const chart = new ApexCharts(document.getElementById("area-chart"), options);
-      chart.render();
-    }
-  });
-</script>
+        if (document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') {
+          const chart = new ApexCharts(document.getElementById("area-chart"), options);
+          chart.render();
+        }
+      });
+    </script>
 
         </div>
       </main>
