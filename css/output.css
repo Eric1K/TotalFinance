@@ -1738,6 +1738,10 @@ input:checked + .toggle-bg {
   margin-bottom: 2.5rem;
 }
 
+.mt-2\.5 {
+  margin-top: 0.625rem;
+}
+
 .block {
   display: block;
 }
@@ -2234,6 +2238,10 @@ input:checked + .toggle-bg {
   row-gap: 0.5rem;
 }
 
+.gap-y-6 {
+  row-gap: 1.5rem;
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -2303,6 +2311,10 @@ input:checked + .toggle-bg {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-visible {
+  overflow: visible;
 }
 
 .overflow-y-auto {
@@ -2416,6 +2428,21 @@ input:checked + .toggle-bg {
   border-color: rgb(17 24 39 / 0.1);
 }
 
+.border-blue-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(63 131 248 / var(--tw-border-opacity));
+}
+
+.border-blue-800 {
+  --tw-border-opacity: 1;
+  border-color: rgb(30 66 159 / var(--tw-border-opacity));
+}
+
+.border-blue-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(195 221 253 / var(--tw-border-opacity));
+}
+
 .bg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(63 131 248 / var(--tw-bg-opacity));
@@ -2488,6 +2515,11 @@ input:checked + .toggle-bg {
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
+.bg-indigo-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(54 47 120 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -2552,6 +2584,18 @@ input:checked + .toggle-bg {
 
 .to-\[\#9089FC\] {
   --tw-gradient-to: #9089FC var(--tw-gradient-to-position);
+}
+
+.to-blue-600 {
+  --tw-gradient-to: #1C64F2 var(--tw-gradient-to-position);
+}
+
+.fill-gray-50 {
+  fill: #F9FAFB;
+}
+
+.stroke-gray-200 {
+  stroke: #E5E7EB;
 }
 
 .object-cover {
@@ -2802,6 +2846,18 @@ input:checked + .toggle-bg {
   padding-top: 2.5rem;
 }
 
+.pb-20 {
+  padding-bottom: 5rem;
+}
+
+.pb-24 {
+  padding-bottom: 6rem;
+}
+
+.pt-24 {
+  padding-top: 6rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2984,6 +3040,10 @@ input:checked + .toggle-bg {
 .text-green-400 {
   --tw-text-opacity: 1;
   color: rgb(49 196 141 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .opacity-0 {
@@ -3193,6 +3253,11 @@ input:checked + .toggle-bg {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+.\[mask-image\:radial-gradient\(100\%_100\%_at_top_right\2c white\2c transparent\)\] {
+  -webkit-mask-image: radial-gradient(100% 100% at top right,white,transparent);
+          mask-image: radial-gradient(100% 100% at top right,white,transparent);
+}
+
 .placeholder\:text-gray-400::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
@@ -3242,6 +3307,16 @@ input:checked + .toggle-bg {
 .hover\:bg-blue-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(63 131 248 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-indigo-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(81 69 205 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-indigo-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(66 56 157 / var(--tw-bg-opacity));
 }
 
 .hover\:text-blue-600:hover {
@@ -3364,6 +3439,11 @@ input:checked + .toggle-bg {
   --tw-ring-color: rgb(88 80 236 / var(--tw-ring-opacity));
 }
 
+.focus\:ring-blue-600:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(28 100 242 / var(--tw-ring-opacity));
+}
+
 .focus\:ring-opacity-50:focus {
   --tw-ring-opacity: 0.5;
 }
@@ -3394,6 +3474,10 @@ input:checked + .toggle-bg {
 
 .focus-visible\:outline-blue-800:focus-visible {
   outline-color: #1E429F;
+}
+
+.focus-visible\:outline-blue-600:focus-visible {
+  outline-color: #1C64F2;
 }
 
 :is(.dark .dark\:divide-gray-600) > :not([hidden]) ~ :not([hidden]) {
@@ -3553,6 +3637,10 @@ input:checked + .toggle-bg {
 
   .sm\:top-\[calc\(100\%-30rem\)\] {
     top: calc(100% - 30rem);
+  }
+
+  .sm\:col-span-2 {
+    grid-column: span 2 / span 2;
   }
 
   .sm\:-my-px {
@@ -3788,6 +3876,14 @@ input:checked + .toggle-bg {
     padding-top: 1.5rem;
   }
 
+  .sm\:pb-32 {
+    padding-bottom: 8rem;
+  }
+
+  .sm\:pt-32 {
+    padding-top: 8rem;
+  }
+
   .sm\:text-left {
     text-align: left;
   }
@@ -3977,6 +4073,10 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 1024px) {
+  .lg\:static {
+    position: static;
+  }
+
   .lg\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -4004,6 +4104,10 @@ input:checked + .toggle-bg {
 
   .lg\:mt-8 {
     margin-top: 2rem;
+  }
+
+  .lg\:mr-0 {
+    margin-right: 0px;
   }
 
   .lg\:block {
