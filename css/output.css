@@ -1726,6 +1726,18 @@ input:checked + .toggle-bg {
   margin-top: -4rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-36 {
+  margin-bottom: 9rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1840,6 +1852,10 @@ input:checked + .toggle-bg {
 
 .h-14 {
   height: 3.5rem;
+}
+
+.h-1 {
+  height: 0.25rem;
 }
 
 .min-h-full {
@@ -2782,6 +2798,10 @@ input:checked + .toggle-bg {
   padding-top: 3rem;
 }
 
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -3603,6 +3623,26 @@ input:checked + .toggle-bg {
     margin-top: 0px;
   }
 
+  .sm\:-mt-3 {
+    margin-top: -0.75rem;
+  }
+
+  .sm\:-mt-6 {
+    margin-top: -1.5rem;
+  }
+
+  .sm\:-mb-6 {
+    margin-bottom: -1.5rem;
+  }
+
+  .sm\:-mb-16 {
+    margin-bottom: -4rem;
+  }
+
+  .sm\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
   .sm\:block {
     display: block;
   }
@@ -3744,6 +3784,10 @@ input:checked + .toggle-bg {
     padding-top: 2rem;
   }
 
+  .sm\:pt-6 {
+    padding-top: 1.5rem;
+  }
+
   .sm\:text-left {
     text-align: left;
   }
@@ -3797,6 +3841,10 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 768px) {
+  .md\:visible {
+    visibility: visible;
+  }
+
   .md\:absolute {
     position: absolute;
   }
@@ -3817,6 +3865,10 @@ input:checked + .toggle-bg {
     order: 2;
   }
 
+  .md\:order-3 {
+    order: 3;
+  }
+
   .md\:-ml-4 {
     margin-left: -1rem;
   }
@@ -3825,8 +3877,20 @@ input:checked + .toggle-bg {
     margin-top: 0px;
   }
 
+  .md\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
+  .md\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
   .md\:block {
     display: block;
+  }
+
+  .md\:inline-block {
+    display: inline-block;
   }
 
   .md\:flex {
@@ -3835,6 +3899,10 @@ input:checked + .toggle-bg {
 
   .md\:grid {
     display: grid;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 
   .md\:max-w-2xl {
@@ -4039,6 +4107,14 @@ input:checked + .toggle-bg {
 
   .lg\:pt-12 {
     padding-top: 3rem;
+  }
+
+  .lg\:pt-1 {
+    padding-top: 0.25rem;
+  }
+
+  .lg\:pt-6 {
+    padding-top: 1.5rem;
   }
 
   .lg\:text-left {
