@@ -183,11 +183,16 @@
         </div>
 
         <!-- Overview Columns -->
-        <dl class="mx-auto grid mt-6 lg:px-32 md:px-6 sm:px-6 grid-cols-1 gap-px sm:grid-cols-2 lg:grid-cols-2">
-          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 ring-1 ring-gray-900/10 dark:bg-gray-800  bg-white px-4 py-10 sm:px-6 xl:px-8">
+        <dl class="mx-auto grid mt-6 px-0 md:px-0 sm:px-6 grid-cols-1 gap-px sm:grid-cols-2 lg:grid-cols-2">
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 ring-1 ring-gray-900/10 dark:bg-gray-800  bg-white px-4 py-6 sm:px-6 xl:px-8">
             <dt class="text-sm font-medium leading-6 text-gray-500">Net Worth</dt>
             <dd class="text-xs font-medium text-green-400">+54.02%</dd>
             <dd class="w-full flex-none text-3xl font-medium leading-10 tracking-tight text-gray-900">$12,787.00</dd>
+          </div>
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 ring-1 ring-gray-900/10 dark:bg-gray-800  bg-white px-4 py-6 sm:px-6 xl:px-8">
+            <dt class="text-sm font-medium leading-6 text-gray-500">5 Year Prediction</dt>
+            <dd class="text-xs font-medium text-rose-600">+10.18%</dd>
+            <dd class="w-full flex-none text-3xl font-medium leading-10 tracking-tight text-gray-900">$30,156.00</dd>
           </div>
           <!-- <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 ring-1 ring-gray-900/10 dark:bg-gray-800  bg-white px-4 py-10 sm:px-6 xl:px-8">
             <dt class="text-sm font-medium leading-6 text-gray-500">Expenses</dt>
@@ -199,18 +204,14 @@
             <dd class="text-xs font-medium text-gray-700">-1.39%</dd>
             <dd class="w-full flex-none text-3xl font-medium leading-10 md:py-2 tracking-tight text-gray-900">$245,988.00</dd>
           </div> -->
-          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 ring-1 ring-gray-900/10 dark:bg-gray-800  bg-white px-4 py-10 sm:px-6 xl:px-8">
-            <dt class="text-sm font-medium leading-6 text-gray-500">5 Year Prediction</dt>
-            <dd class="text-xs font-medium text-rose-600">+10.18%</dd>
-            <dd class="w-full flex-none text-3xl font-medium leading-10 tracking-tight text-gray-900">$30,156.00</dd>
-          </div>
+          
         </dl>
         
       </div>
       
-        <div class="mx-auto max-w-7xl flex flex-col gap-x-4 sm:flex-row px-4 py-4 sm:px-6 lg:px-8 xl:grid-cols-3">
-        <!-- Pie Chart -->
-        <div class = "items-center justify-center mt-3">   
+      <div class="mx-auto max-w-7xl flex flex-col gap-x-4 sm:flex-row px-4 py-4 sm:px-6 lg:px-8 xl:grid-cols-5">
+          <!-- Pie Chart -->
+          <div class = "items-center justify-center mt-3 xl:col-span-2 w-1/2">   
           <div class="max-w-sm mx-auto w-full bg-white rounded-lg shadow-md ring-1 ring-gray-900/10 dark:bg-gray-800 p-4 md:p-6">
             <div class="flex justify-between items-start w-full">
                 <div class="flex-col items-center">
@@ -428,39 +429,39 @@
             });
           </script>
 
-        </div>
-
-        <!-- AI interface --> 
-        <div class="bg-white mt-3 max-w-7xl w-full xl:col-span-2 mx-auto p-4 rounded-lg shadow-md ring-1 ring-gray-900/10">
-          <h1 class="text-2xl text-center font-semibold text-gray-900 mt-2">AI Financial Advisor</h1>
-          <div class="chat-container">
-              <div class="chat p-2 lg:mt-56 mt-32 space-y-2">
-                  <div class="chat-message user text-right">
-                      <div class="message-text bg-blue-900 text-white py-2 px-3 rounded-t-lg inline-block">
-                          Hello, Moneyverse!
-                      </div>
-                  </div>
-                  <div class="chat-message bot">
-                      <div class="message-text bg-gray-200 py-2 px-3 rounded-t-lg inline-block">
-                          Hi there! How can I assist you today?
-                      </div>
-                  </div>
-                  <!-- copy and paste more chat messages here -->
-              </div>
-              <div class="user-input mt-4 flex items-center">
-                <input type="text" id="user-message" placeholder="Ask a question..." class="w-5/6 py-2 px-3 border rounded-l-lg" />
-                <button id="send-button" class="hidden md:inline-block bg-blue-900 hover:bg-blue-800 text-white py-2 px-3 rounded-r-lg">Send</button>
-                
-                <button id="send-button" class="md:hidden bg-blue-900 hover:bg-blue-800 text-white py-2 px-3 rounded-r-lg flex items-center border">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send w-6 h-6" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M10 14l11 -11"></path>
-                        <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5"></path>
-                    </svg>
-                </button>
-            </div>
-            
           </div>
-        </div>
+
+          <!-- AI interface --> 
+          <div class="bg-white mt-3 max-w-7xl w-full xl:col-span-3 mx-auto p-4 rounded-lg shadow-md ring-1 ring-gray-900/10">
+            <h1 class="text-2xl text-center font-semibold text-gray-900 mt-2">AI Financial Advisor</h1>
+            <div class="chat-container ">
+                <div class="chat p-2 lg:mt-72 mt-32 space-y-2">
+                    <div class="chat-message user text-right">
+                        <div class="message-text bg-blue-900 text-white py-2 px-3 rounded-t-lg inline-block">
+                            Hello, Moneyverse!
+                        </div>
+                    </div>
+                    <div class="chat-message bot">
+                        <div class="message-text bg-gray-200 py-2 px-3 rounded-t-lg inline-block">
+                            Hi there! How can I assist you today?
+                        </div>
+                    </div>
+                    <!-- copy and paste more chat messages here -->
+                </div>
+                <div class="user-input mt-4 flex items-center">
+                  <input type="text" id="user-message" placeholder="Ask a question..." class="w-full py-2 px-3 border rounded-l-lg" />
+                  <button id="send-button" class="hidden md:inline-block bg-blue-900 hover:bg-blue-800 text-white py-2 px-3 rounded-r-lg">Send</button>
+                  
+                  <button id="send-button" class="md:hidden bg-blue-900 hover:bg-blue-800 text-white py-2 px-3 rounded-r-lg flex items-center border">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send w-6 h-6" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M10 14l11 -11"></path>
+                          <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5"></path>
+                      </svg>
+                  </button>
+              </div>
+              
+            </div>
+          </div>
       </div>
       
       
