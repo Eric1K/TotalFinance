@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="relative isolate px-6 pt-14 lg:px-8">  
+    <!--background-->
+    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 " aria-hidden="true">
+      <!-- <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#0077B6] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div> -->
+      <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#0077B6] to-[#E1F1FA] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+      <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#0077B6] to-[#1893F8] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+
+  </div>
+
+  <main>
+      <!-- Title + Hero -->
+      <div class="mx-auto mt-16 max-w-7xl px-6 sm:mt-32 lg:px-8">
+        <div class="mx-auto max-w-4xl text-center">
+          <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Affordable Wealth Creation for All</p>
+        </div>
+        <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">Unlock the power of artificial intelligence to revolutionize your financial future.</p>          
+        
+        <!-- Pricing -->
+        <div class="isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-8 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-3">
+          <!-- Free Trial -->
+          <div class="mx-auto rounded-3xl p-8 ring-2 ring-blue-900">
+            <h2 id="tier-startup" class="text-lg font-semibold leading-8 text-blue-900">Premium Subscription</h2>
+            <p class="mt-4 text-sm leading-6 text-gray-600">A plan to empower your financial ventures.</p>
+            <p class="mt-6 flex items-baseline gap-x-1">
+              <!-- Price, update based on frequency toggle state -->
+              <span class="text-4xl font-bold tracking-tight text-gray-900">$9.99</span>
+              <!-- Payment frequency, update based on frequency toggle state -->
+              <span class="text-sm font-semibold leading-6 text-gray-600">/year</span>
+            </p>
+            <a href="#" aria-describedby="tier-startup" class="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 bg-blue-900 text-white shadow-sm hover:bg-blue-800">Select</a>
+            <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600">
+              <li class="flex gap-x-3">
+                <svg class="h-6 w-5 flex-none text-blue-900" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                </svg>
+                Tailored investment strategies
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="h-6 w-5 flex-none text-blue-900" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                </svg>
+                Budgeting and savings plans
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="h-6 w-5 flex-none text-blue-900" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                </svg>
+                Unlimited access to AI financial advisors
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="h-6 w-5 flex-none text-blue-900" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                </svg>
+                Email & phone support with founders
+              </li>
+            </ul>
+          </div>
+          <!-- Testimonial section -->
+          <div class="mx-auto max-w-7xl xl:col-span-2">
+            <div class="relative overflow-hidden bg-gray-900 px-6 py-20 shadow-xl sm:rounded-3xl rounded-3xl sm:px-10 sm:py-24 md:px-12 lg:px-20 h-full ">
+              <img class="absolute inset-0 h-full w-full object-cover brightness-150 saturate-0" src="https://images.unsplash.com/photo-1601381718415-a05fb0a261f3?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8ODl8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1216&q=80" alt="">
+              <div class="absolute inset-0 bg-gray-900/90 mix-blend-multiply"></div>
+              <div class="absolute -left-80 -top-56 transform-gpu blur-3xl" aria-hidden="true">
+                <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#776fff] opacity-[0.45]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+              </div>
+              <div class="hidden md:absolute md:bottom-16 md:left-[50rem] md:block md:transform-gpu md:blur-3xl" aria-hidden="true">
+                <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#776fff] opacity-25" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+              </div>
+              <div class="relative mx-auto h-full flex flex-col justify-center max-w-2xl lg:mx-0">
+                <!-- <img class="h-12 w-auto" src="https://tailwindui.com/img/logos/workcation-logo-white.svg" alt=""> -->
+                <figure>
+                  <blockquote class="mt-6 text-lg font-semibold text-white sm:text-xl sm:leading-8">
+                    <p>“As someone with limited financial knowledge, I was hesitant to dive into investing. However, TotalFinance has not only gotten me into investing, but I have seen my wealth grow steadily since I joined.”</p>
+                  </blockquote>
+                  <figcaption class="mt-6 text-base text-white">
+                    <div class="font-semibold">Bob Smith</div>
+                    <div class="mt-1">Freshman at Random University</div>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      
+  
+      <footer class="bg-white" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">Footer</h2>
+        <!-- sm:pt-24 lg:px-8 lg:pt-32 -->
+        <div class="mx-auto max-w-7xl px-6 pb-8 pt-6 sm:pt-6 lg:px-8 lg:pt-6">
+          <!-- sm:pt-8 -->
+          <div class="border-t border-gray-900/10 pt-8 sm:mt-8 md:flex md:items-center md:justify-between">
+            <div class="flex justify-center space-x-6 md:order-2">
+              <p class=" text-gray-500 font-semibold  md:mt-0">Contact Us:</p>
+                  
+              <a href="#EMAIL" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">Email</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
+                  <path d="M3 7l9 6l9 -6"></path>
+                </svg>
+              </a>
+              <a href="tel:+1 (774) 275-4907" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">Phone</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
+                </svg> 
+              </a>
+        
+            </div>
+            <p class="mt-8 text-center text-xs leading-5 text-gray-500 md:order-1 md:mt-0">&copy; 2023 TotalFinance. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+
+
+      <style>
+          /* Selected boxes */
+          .checked {
+            background-color: #012E61; /* Change the background color when selected */
+            color: #fff; /* Change the text color when selected */
+            border-color: #3490dc; /* Change the border color when selected */
+          }
+        </style>
+  </main>
+    
+{% endblock content %}

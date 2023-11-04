@@ -5,7 +5,8 @@
         <title>Register - TotalFinance</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-        <link href="../css/output.css" rel="stylesheet">
+        <!-- <link href="../css/output.css" rel="stylesheet"> -->
+        <link href="{{url_for('static',filename='css/output.css')}}" rel="stylesheet">
         <style>
 
         </style>
@@ -22,7 +23,7 @@
         </div>
 
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img class="mx-auto h-10 w-auto" src="../images/m1-2.png" alt="Your Company">
+          <img class="mx-auto h-10 w-auto" src="{{url_for('static',filename='images/m1-2.png')}}" alt="Your Company">
           <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Register for an Account</h2>
         </div>
         
@@ -92,7 +93,7 @@
 
           <p class="mt-10 text-center text-sm text-gray-500">
             Already have an account?
-            <a href="signin.html" class="font-semibold leading-6 text-blue-900 hover:text-blue-800">Sign in</a>
+            <a href="signin" class="font-semibold leading-6 text-blue-900 hover:text-blue-800">Sign in</a>
           </p>
         </div>
       </div>
