@@ -20,7 +20,7 @@ COPY . .
 
 
 # Specify the command to run on container start
-CMD [ "python", "./app.py" ]
+CMD [ "python", "./application.py" ]
 
 #docker build -t flask-container .
 #docker run -p 5000:5000 flask-container

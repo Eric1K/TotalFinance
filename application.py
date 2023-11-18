@@ -1,4 +1,4 @@
-from flaskmain import app
+from flaskmain import application
 
 """ ### IMPORTANT INFORMATION ###
 To run:
@@ -56,7 +56,9 @@ Welcome, {% for dat in data %}{{dat.name}}{% endfor %} overview.html original we
 if __name__ == "__main__":
     # app.run(debug=True)
     #app.run(debug=False)
-    app.run(host='0.0.0.0', port=5000)
+    application.run(host='0.0.0.0', port=5000)
 
 
 #TODO: add phone number bod, etc to database
+#pip freeze > requirements.txt
+#https://www.youtube.com/watch?v=dhHOzye-Rms
