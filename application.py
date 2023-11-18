@@ -21,8 +21,8 @@ https://tabler-icons.io/
 
 ### database ###
 python
-from flaskmain import app, db
-app.app_context().push()
+from flaskmain import application, db
+application.app_context().push()
 db.create_all()
 
 ### creating a user ###
@@ -45,6 +45,10 @@ user.name = "jeff"
 
 Users.query.filter_by(name = "jeff").delete()
 Users.query.filter_by(email = "bob@example.com").delete()
+
+Delete all:
+db.session.query(Users).delete()
+db.session.commit()
 
 Code snippets:
 {% if current_user.is_authentiacted %} stuff here
