@@ -43,6 +43,9 @@ user = Users.query.get(2)
 user = Users.query.filter_by(email = "bob@example.com").first()
 user.name = "jeff"
 
+Users.query.filter_by(name = "jeff").delete()
+Users.query.filter_by(email = "bob@example.com").delete()
+
 Code snippets:
 {% if current_user.is_authentiacted %} stuff here
 Welcome, {% for dat in data %}{{dat.name}}{% endfor %} overview.html original welcome

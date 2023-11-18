@@ -44,7 +44,7 @@ def signin():
     return render_template("signin.html", title ="Sign In", form = form)
 
 @app.route("/register", methods = ["GET", "POST"])
-def register():
+def register(): 
     form = RegistrationForm()
     if form.validate_on_submit():
         hashed_password = bcrypt.generate_password_hash(form.password.data).decode("utf-8")
