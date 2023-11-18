@@ -53,6 +53,9 @@ def register():
         db.session.commit()
         print("Created Account")
         #might want to redirect to login
+
+        login_user(user)
+        
         flash(f"Account Created for {form.name.data}!", "success")
         return redirect(url_for("overview"))
 
