@@ -6,13 +6,16 @@ python -m flask --app flaskmain run
 
 ### Run with making changes: ###
 python -m flask --app flaskmain run --debug
-npx tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch
+npx tailwindcss -i ./flaskmain/static/css/input.css -o ./flaskmain/static/css/output.css --watch
 OR press the run button in visual studio code
 
 ### Installations: ###
 pip install Flask
 pip install flask-wtf
 pip install flask-sqlalchemy
+pip install flask_bcrypt
+pip install flask_login
+pip install email_validator
 
 other libraries:
 flowcharts: https://flowbite.com/docs/plugins/charts/
@@ -58,9 +61,9 @@ Welcome, {% for dat in data %}{{dat.name}}{% endfor %} overview.html original we
 
 
 if __name__ == "__main__":
-    # app.run(debug=True)
-    #app.run(debug=False)
-    application.run(host='0.0.0.0', port=5000)
+    application.run(debug=True)
+    #application.run(debug=False)
+    #application.run(host='0.0.0.0', port=5000)
 
 
 #TODO: add phone number bod, etc to database

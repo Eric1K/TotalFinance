@@ -66,6 +66,10 @@ def signout():
     logout_user()
     return redirect(url_for("home"))
 
+@application.route("/launch")
+def launch():
+    return render_template("launch.html", title ="Launch", data = data)
+
 @application.route("/overview")
 @login_required
 def overview():
