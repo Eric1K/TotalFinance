@@ -57,7 +57,7 @@ def register():
         login_user(user)
         
         flash(f"Account Created for {form.name.data}!", "success")
-        return redirect(url_for("overview"))
+        return redirect(url_for("introduction"))
 
     return render_template("register.html", title ="Register", form = form)
 
@@ -67,6 +67,7 @@ def signout():
     return redirect(url_for("home"))
 
 @application.route("/introduction")
+@login_required
 def introduction():
     return render_template("introduction.html", title ="Introduction")
 
