@@ -99,3 +99,13 @@ def financialplan():
 @login_required
 def settings():
     return render_template("settings.html", title ="Settings")
+
+@application.route("/notifications")
+@login_required
+def notifications():
+    return render_template("notifications.html", title ="Notifications")
+
+@application.route("/security")
+@login_required
+def security():
+    return render_template("security.html", title ="Security")
