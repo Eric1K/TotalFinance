@@ -48,7 +48,7 @@ def register():
     form = RegistrationForm()
     if form.validate_on_submit():
         hashed_password = bcrypt.generate_password_hash(form.password.data).decode("utf-8")
-        user = Users(name = form.name.data, email = form.email.data, password = hashed_password) #User method from models.py
+        user = Users(name = form.name.data, email = form.email.data, password = hashed_password, phone = form.phone.data, dob = form.birthday.data) #User method from models.py
         db.session.add(user)
         db.session.commit()
         print("Created Account")
