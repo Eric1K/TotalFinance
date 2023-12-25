@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./flaskmain/templates/*.{html,js}","./node_modules/flowbite/**/*.js"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        cblue: "#172554"
+      }
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),
