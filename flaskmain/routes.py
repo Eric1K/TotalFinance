@@ -98,5 +98,4 @@ def financialplan():
 @application.route("/settings")
 @login_required
 def settings():
-    form = RegistrationForm()
-    return render_template("settings.html", title ="Settings", form=form)
+    return render_template("settings.html", title ="Settings")
