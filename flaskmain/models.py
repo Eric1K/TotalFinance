@@ -17,7 +17,7 @@ class Users(db.Model, UserMixin):
     dob = db.Column(db.String(60), nullable = False)
 
     def __repr__(self):
-        return f"Users('{self.name}', '{self.email}','{self.password}')"
+        return f"Users('{self.name}', '{self.email}','{self.password}','{self.phone}','{self.dob}')"
 
 class updateNetWorth(db.Model):
     id = db.Column(db.Integer, primary_key = True)
