@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, flash, redirect, request
 from flaskmain import application, db, bcrypt
 from flaskmain.models import Users, updateNetWorth
-from flaskmain.forms import RegistrationForm, LoginForm, AssetListForm
+from flaskmain.forms import *
 from flask_login import login_user, current_user, logout_user, login_required
 
 data = [
@@ -95,11 +95,33 @@ def investing():
 def financialplan():
     return render_template("financialplan.html", title ="Financial Plan")
 
-@application.route("/settings")
+@application.route("/settings", methods = ["GET", "POST"])
 @login_required
 def settings():
     form = RegistrationForm()
-    return render_template("settings.html", title ="Settings", form=form)
+    nameform = SettingNameForm()
+    emailform = SettingEmailForm()
+    phoneform = SettingPhoneForm()
+    dobform = SettingDOBForm()
+    if nameform.submit.data and nameform.validate_on_submit():
+        current_user.name = nameform.name.data
+        db.session.commit()
+        return redirect(url_for("settings"))
+    if emailform.submit.data and emailform.validate_on_submit():
+        current_user.email = emailform.email.data
+        db.session.commit()
+        return redirect(url_for("settings"))
+    if phoneform.submit.data and phoneform.validate_on_submit():
+         print("phone")
+         current_user.phone = phoneform.phone.data
+         db.session.commit()
+         return redirect(url_for("settings"))
+    if dobform.submit.data and dobform.validate_on_submit():
+        print("dob")
+        current_user.dob = dobform.birthday.data
+        db.session.commit()
+        return redirect(url_for("settings"))
+    return render_template("settings.html", title ="Settings", form=form, nameform=nameform, emailform=emailform, phoneform=phoneform, dobform=dobform)
 
 @application.route("/notifications")
 @login_required

@@ -33,3 +33,32 @@ class AssetListForm(FlaskForm):
     assetvalue = FloatField("Asset Value", validators = [DataRequired()])
     assetprice = FloatField("Asset Price", validators = [DataRequired()])
     doa = StringField("Date of Acquisition", validators = [DataRequired()])
+
+
+#Forms for Settings
+class SettingNameForm(FlaskForm):
+    name = StringField("Full Name", validators = [DataRequired()])
+    submit = SubmitField("Confirm Name")
+
+class SettingEmailForm(FlaskForm):
+    email = StringField("Email Address", validators = [DataRequired(), Email()])
+    submit = SubmitField("Confirm Email")
+    def validate_email(self, email):
+        #check if email is already registered
+        user = Users.query.filter_by(email = email.data).first()
+        if user:
+            raise ValidationError("This email is already taken.")
+
+class SettingPhoneForm(FlaskForm):
+    phone = StringField('Phone Number', validators=[DataRequired()])
+    submit = SubmitField("Confirm Phone")
+    def validate_phone(self, phone):
+        #check if email is already registered
+        user = Users.query.filter_by(phone = phone.data).first()
+        if user:
+            raise ValidationError("This phone number is already taken.")
+
+class SettingDOBForm(FlaskForm):
+    birthday = DateField("Date of Birth", validators=[DataRequired()])
+    submit = SubmitField("Confirm Birthday")
+

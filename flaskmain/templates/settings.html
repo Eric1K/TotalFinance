@@ -6,27 +6,31 @@
   <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
   <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
     <div class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
-
       <div class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
-        <div>
-          <div class="mt-1 text-center">
-            {{ form.csrf_token }}
-            <div class="">
-              <h3 class="text-base w-max mt-2 font-semibold leading-6 text-gray-900" id="modal-title">Change {{form.name.label}}</h3>
-              <!-- <p class="text-sm text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius aliquam laudantium explicabo pariatur iste dolorem animi vitae error totam. At sapiente aliquam accusamus facere veritatis.</p> -->
-              <form class="space-y-2 mt-5" method="POST" action="">
-                {{form.name(class = "w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6", id="name", type="text",  autocomplete="name")}}
-                <!-- <label for="name" class="block text-sm font-medium leading-6 text-left text-gray-900">Full Name</label> -->
-                <!-- <input class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6" id="name" type="text"> -->
-              </form>
-
+        <form method="POST" action="">
+          <div>
+            <div class="mt-1 text-center">
+              {{ nameform.csrf_token }}
+              <div class="">
+                <h3 class="text-base w-max mt-2 font-semibold leading-6 text-gray-900" id="modal-title">Change {{form.name.label}}</h3>
+                <!-- <p class="text-sm text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius aliquam laudantium explicabo pariatur iste dolorem animi vitae error totam. At sapiente aliquam accusamus facere veritatis.</p> -->
+                <div class="space-y-2 mt-5">
+                  {{nameform.name(class = "w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6", id="name", type="text",  autocomplete="name")}}
+                  <!-- <label for="name" class="block text-sm font-medium leading-6 text-left text-gray-900">Full Name</label> -->
+                  <!-- <input class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6" id="name" type="text"> -->
+                  {% for error in nameform.name.errors %}
+                    <span class = "text-sm mt-2 text-rose-600">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="mt-5 sm:mt-5 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
-          <button type="button" class="inline-flex w-full justify-center rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2">Confirm</button>
-          <button id = "cancelname-button" type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:col-start-1 sm:mt-0">Cancel</button>
-        </div>
+          <div class="mt-5 sm:mt-5 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
+            {{nameform.submit(class="inline-flex w-full justify-center rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2", type="submit")}}
+            <!-- <button type="button" class="inline-flex w-full justify-center rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2">Confirm</button> -->
+            <button id = "cancelname-button" type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:col-start-1 sm:mt-0">Cancel</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -36,62 +40,65 @@
   <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
   <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
     <div class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
-
       <div class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
-        <div>
-          <div class="mt-1 text-center">
-            {{ form.csrf_token }}
-            <div class="">
-              <h3 class="text-base w-max mt-2 font-semibold leading-6 text-gray-900" id="modal-title">Change {{form.email.label}}</h3>
-
-
-              <form class="space-y-2 mt-5" method="POST" action="">
-                {{form.email(class = "w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6", id="email", type="email",  autocomplete="name")}}
-                <!-- <label for="name" class="block text-sm font-medium leading-6 text-left text-gray-900">Full Name</label> -->
-                <!-- <input class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6" id="name" type="text"> -->
-              </form>
-
-             
-
+        <form method="POST" action="">
+          <div>
+            <div class="mt-1 text-center">
+              {{ emailform.csrf_token }}
+              <div class="">
+                <h3 class="text-base w-max mt-2 font-semibold leading-6 text-gray-900" id="modal-title">Change {{form.email.label}}</h3>
+                <div class="space-y-2 mt-5">
+                  {{emailform.email(class = "w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6", id="email", type="email",  autocomplete="email")}}
+                  <!-- <label for="name" class="block text-sm font-medium leading-6 text-left text-gray-900">Full Name</label> -->
+                  <!-- <input class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6" id="name" type="text"> -->
+                  {% for error in emailform.email.errors %}
+                    <span class = "text-sm mt-2 text-rose-600">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="mt-5 sm:mt-5 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
-          <button type="button" class="inline-flex w-full justify-center rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2">Confirm</button>
-          <button id = "cancelemail-button" type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:col-start-1 sm:mt-0">Cancel</button>
-        </div>
+          <div class="mt-5 sm:mt-5 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
+            {{emailform.submit(class="inline-flex w-full justify-center rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2", type="submit")}}
+            <!-- <button type="button" class="inline-flex w-full justify-center rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2">Confirm</button> -->
+            <button id = "cancelemail-button" type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:col-start-1 sm:mt-0">Cancel</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 </div>
 
+
+
 <div class="relative z-10 settingphone hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
   <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
   <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
     <div class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
-
       <div class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
-        <div>
-          <div class="mt-1 text-center">
-            {{ form.csrf_token }}
-            <div class="">
-              <h3 class="text-base w-max mt-2 font-semibold leading-6 text-gray-900" id="modal-title">Change {{form.phone.label}}</h3>
-
-
-              <form class="space-y-2 mt-5" method="POST" action="">
-                {{form.phone(class = "w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6", id="phone", type="phone",  autocomplete="name")}}
-                <!-- <label for="name" class="block text-sm font-medium leading-6 text-left text-gray-900">Full Name</label> -->
-                <!-- <input class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6" id="name" type="text"> -->
-              </form>
-              
-
+        <form method="POST" action="">
+          <div>
+            <div class="mt-1 text-center">
+              {{ phoneform.csrf_token }}
+              <div class="">
+                <h3 class="text-base w-max mt-2 font-semibold leading-6 text-gray-900" id="modal-title">Change {{form.phone.label}}</h3>
+                <div class="space-y-2 mt-5">
+                  {{phoneform.phone(class = "w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6", id="phone", type="phone",  autocomplete="phone")}}
+                  <!-- <label for="name" class="block text-sm font-medium leading-6 text-left text-gray-900">Full Name</label> -->
+                  <!-- <input class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6" id="name" type="text"> -->
+                  {% for error in phoneform.phone.errors %}
+                    <span class = "text-sm mt-2 text-rose-600">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="mt-5 sm:mt-5 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
-          <button type="button" class="inline-flex w-full justify-center rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2">Confirm</button>
-          <button id = "cancelphone-button" type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:col-start-1 sm:mt-0">Cancel</button>
-        </div>
+          <div class="mt-5 sm:mt-5 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
+            {{phoneform.submit(class="inline-flex w-full justify-center rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2", type="submit")}}
+            <!-- <button type="button" class="inline-flex w-full justify-center rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2">Confirm</button> -->
+            <button id = "cancelphone-button" type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:col-start-1 sm:mt-0">Cancel</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -101,27 +108,30 @@
   <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
   <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
     <div class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
-
       <div class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
+        <form method="POST" action="">
         <div>
           <div class="mt-1 text-center">
-            {{ form.csrf_token }}
+            {{ dobform.csrf_token }}
             <div class="">
               <h3 class="text-base w-max mt-2 font-semibold leading-6 text-gray-900" id="modal-title">Change {{form.birthday.label}}</h3>
-
-              <form class="space-y-2 mt-5" method="POST" action="">
-                {{form.birthday(class = "w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6", id="date", type="date",  autocomplete="name")}}
+              <div class="space-y-2 mt-5">
+                {{dobform.birthday(class = "w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6", id="date", type="date",  autocomplete="name")}}
                 <!-- <label for="name" class="block text-sm font-medium leading-6 text-left text-gray-900">Full Name</label> -->
                 <!-- <input class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6" id="name" type="text"> -->
-              </form>
-
+                {% for error in dobform.birthday.errors %}
+                  <span class = "text-sm mt-2 text-rose-600">{{ error }}</span>
+                {% endfor %}
+              </div>
             </div>
           </div>
         </div>
         <div class="mt-5 sm:mt-5 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
-          <button type="button" class="inline-flex w-full justify-center rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2">Confirm</button>
+          {{dobform.submit(class="inline-flex w-full justify-center rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2", type="submit")}}
+          <!-- <button type="button" class="inline-flex w-full justify-center rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2">Confirm</button> -->
           <button id = "cancelbirthday-button" type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:col-start-1 sm:mt-0">Cancel</button>
         </div>
+      </form>
       </div>
     </div>
   </div>
