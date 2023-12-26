@@ -30,16 +30,12 @@
       {% endwith %}     
     <div class="mx-auto flex max-w-2xl items-center justify-between gap-x-4 lg:mx-0 lg:max-w-none">
       <div class="flex items-center gap-x-6">
-        <!-- <img src="https://tailwindui.com/img/logos/48x48/tuple.svg" alt="" class="h-16 w-16 flex-none rounded-full ring-1 ring-gray-900/10"> -->
-        <span class="inline-block h-14 w-14 overflow-hidden rounded-full bg-gray-100">
-          <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-          </svg>
-        </span>
-        <h1>
-          <div class="mt-1 text-base font-bold leading-6 text-gray-900">Welcome, {{ current_user.name }}</div>
-        </h1>
-      </div>
+  <!-- Removed the SVG icon -->
+  <h1>
+    <div class="mt-1 text-base font-bold leading-6 text-gray-900">Welcome, {{ current_user.name }}</div>
+  </h1>
+</div>
+
         <!-- <button type="button" class="hidden text-sm font-semibold leading-6 text-gray-900 sm:block">Copy URL</button> -->
         <!-- <a href="#" class="hidden text-sm font-semibold leading-6 text-gray-900 sm:block">option</a> -->
         <a href="{{ url_for("contact") }}" class="rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">Contact Us</a>
@@ -123,114 +119,6 @@
                   <div data-popper-arrow></div>
               </div>
             </div>
-            <!-- Include datepicker library -->
-<script src="https://cdn.jsdelivr.net/npm/@datepicker-js/core@3.5.0/dist/datepicker.umd.min.js"></script>
-
-<button
-  id="dateRangeButton"
-  data-dropdown-toggle="dateRangeDropdown"
-  data-dropdown-ignore-click-outside-class="datepicker"
-  type="button"
-  class="inline-flex items-center text-blue-700 dark:text-blue-600 font-medium hover:underline"
->
-  01/01/2024 - 01/02/2024
-  <svg
-    class="w-3 h-3 ml-2"
-    aria-hidden="true"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 10 6"
-  >
-    <path
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="m1 1 4 4 4-4"
-    />
-  </svg>
-</button>
-
-<div
-  id="dateRangeDropdown"
-  class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-80 lg:w-96 dark:bg-gray-700 dark:divide-gray-600"
->
-  <div class="p-3" aria-labelledby="dateRangeButton">
-    <div
-      date-rangepicker
-      datepicker-autohide
-      class="flex items-center"
-    >
-      <div class="relative">
-        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-          <svg
-            class="w-4 h-4 text-gray-500 dark:text-gray-400"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
-            />
-          </svg>
-        </div>
-        <input
-          name="start"
-          type="text"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="MM/DD/YYYY"
-          oninput="validateDate(this)"
-          readonly
-        />
-      </div>
-      <span class="mx-2 text-gray-500 dark:text-gray-400">to</span>
-      <div class="relative">
-        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-          <svg
-            class="w-4 h-4 text-gray-500 dark:text-gray-400"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
-            />
-          </svg>
-        </div>
-        <input
-          name="end"
-          type="text"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="MM/DD/YYYY"
-          oninput="validateDate(this)"
-          readonly
-        />
-      </div>
-    </div>
-    <div id="dateValidation" class="text-red-500 text-xs mt-1 hidden">
-      Please enter a valid date in the format MM/DD/YYYY.
-    </div>
-  </div>
-</div>
-
-<script>
-  const datepickerStart = new Datepicker(document.querySelector('[name="start"]'));
-  const datepickerEnd = new Datepicker(document.querySelector('[name="end"]'));
-
-  function validateDate(input) {
-    const isValidDate = dateFns.isValid(new Date(input.value));
-    const validationMessage = document.getElementById("dateValidation");
-
-    if (isValidDate || input.value === "") {
-      validationMessage.classList.add("hidden");
-    } else {
-      validationMessage.classList.remove("hidden");
-    }
-  }
-</script>
-
           </div>
           <div class="flex justify-end items-center">
             <button id="widgetDropdownButton" data-dropdown-toggle="widgetDropdown" data-dropdown-placement="bottom" type="button"  class="inline-flex items-center justify-center text-gray-500 w-8 h-8 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm"><svg class="w-3.5 h-3.5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
@@ -240,7 +128,7 @@
             <div id="widgetDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="widgetDropdownButton">
                   <li>
-                    <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                    <a href="{{ url_for("assetlist") }}" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                         <div class="mr-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="3" y1="12" x2="21" y2="12"></line>

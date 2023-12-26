@@ -110,3 +110,8 @@ def notifications():
 @login_required
 def security():
     return render_template("security.html", title ="Security")
+
+@application.route("/assetlist")
+@login_required
+def assetlist():
+    return render_template("assetlist.html", title ="Assetlist")
