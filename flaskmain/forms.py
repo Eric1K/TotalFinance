@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, DateField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, DateField, FloatField
 from wtforms.validators import DataRequired, Optional, Length, Email, EqualTo, ValidationError
 from flaskmain.models import Users
 
@@ -25,3 +25,11 @@ class LoginForm(FlaskForm):
     password = PasswordField("Password", validators = [DataRequired()])
     remember = BooleanField("Remember Me")
     submit = SubmitField("Login")
+
+class AssetListForm(FlaskForm):
+    #Asset classes are: bankacc, cash, and stock
+    assettype = StringField("Asset Type", validators = [DataRequired()])
+    assetname = StringField("Asset Name", validators = [DataRequired()]) 
+    assetvalue = FloatField("Asset Value", validators = [DataRequired()])
+    assetprice = FloatField("Asset Price", validators = [DataRequired()])
+    doa = StringField("Date of Acquisition", validators = [DataRequired()])

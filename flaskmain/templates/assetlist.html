@@ -15,7 +15,7 @@
               <h3 class="text-base w-max mt-2 font-semibold leading-6 text-gray-900" id="modal-title">Change {{form.name.label}}</h3>
               <!-- <p class="text-sm text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius aliquam laudantium explicabo pariatur iste dolorem animi vitae error totam. At sapiente aliquam accusamus facere veritatis.</p> -->
               <form class="space-y-2 mt-5" method="POST" action="">
-                {{form.name(class = "w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6", id="name", type="text",  autocomplete="name")}}
+                <!-- {{form.name(class = "w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6", id="name", type="text",  autocomplete="name")}}
                 <!-- <label for="name" class="block text-sm font-medium leading-6 text-left text-gray-900">Full Name</label> -->
                 <!-- <input class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6" id="name" type="text"> -->
               </form>
@@ -46,7 +46,7 @@
 
 
               <form class="space-y-2 mt-5" method="POST" action="">
-                {{form.email(class = "w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6", id="email", type="email",  autocomplete="name")}}
+                <!--{{form.email(class = "w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6", id="email", type="email",  autocomplete="name")}}
                 <!-- <label for="name" class="block text-sm font-medium leading-6 text-left text-gray-900">Full Name</label> -->
                 <!-- <input class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6" id="name" type="text"> -->
               </form>
@@ -79,7 +79,7 @@
 
 
               <form class="space-y-2 mt-5" method="POST" action="">
-                {{form.phone(class = "w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6", id="phone", type="phone",  autocomplete="name")}}
+                <!--{{form.phone(class = "w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6", id="phone", type="phone",  autocomplete="name")}}
                 <!-- <label for="name" class="block text-sm font-medium leading-6 text-left text-gray-900">Full Name</label> -->
                 <!-- <input class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6" id="name" type="text"> -->
               </form>
@@ -110,7 +110,7 @@
               <h3 class="text-base w-max mt-2 font-semibold leading-6 text-gray-900" id="modal-title">Change {{form.birthday.label}}</h3>
 
               <form class="space-y-2 mt-5" method="POST" action="">
-                {{form.birthday(class = "w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6", id="date", type="date",  autocomplete="name")}}
+                <!--{{form.birthday(class = "w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6", id="date", type="date",  autocomplete="name")}}
                 <!-- <label for="name" class="block text-sm font-medium leading-6 text-left text-gray-900">Full Name</label> -->
                 <!-- <input class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6" id="name" type="text"> -->
               </form>
@@ -127,51 +127,39 @@
   </div>
 </div>
   <div class="mx-auto max-w-7xl pt-16 lg:flex lg:gap-x-16 lg:px-8">
-    
-    <aside class="flex overflow-x-auto border-b border-gray-900/5 py-4 lg:block lg:w-64 lg:flex-none lg:border-0 lg:py-20">
-      <nav class="flex-none px-4 sm:px-6 lg:px-0">
-        <ul role="list" class="flex gap-x-3 gap-y-1 whitespace-nowrap lg:flex-col">
-          <li>
-            <!-- Current: "bg-gray-50 text-indigo-600", Default: "text-gray-700 hover:text-indigo-600 hover:bg-gray-50" -->
-            <a href="{{ url_for("settings") }}" class="bg-gray-50 text-blue-900 group flex gap-x-3 rounded-md py-2 pl-2 pr-3 text-sm leading-6 font-semibold">
-              <svg class="h-6 w-6 shrink-0 text-blue-900" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              Assets
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </aside>
   
     <main class="px-4 py-16 sm:px-6 lg:flex-auto lg:px-0 lg:py-20">
       <div class="mx-auto max-w-2xl space-y-16 sm:space-y-20 lg:mx-0 lg:max-w-none">
         <div>
-          <h2 class="text-base font-semibold leading-7 text-gray-900">Asset List</h2>
+          <h2 class="text-base font-semibold leading-7 text-gray-900">Profile</h2>
   
           <dl class="mt-6 space-y-6 divide-y divide-gray-100 border-t border-gray-200 text-sm leading-6">
             <div class="pt-6 sm:flex">
               <dt class="font-medium text-gray-900 sm:w-64 sm:flex-none sm:pr-6">Full name</dt>
               <dd class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto">
                 <div class="text-gray-900">{{current_user.name}}</div>
+                <button id = "openNameSetting-button" type="button" class="font-semibold text-blue-900 hover:text-blue-800">Update</button>
               </dd>
             </div>
             <div class="pt-6 sm:flex">
               <dt class="font-medium text-gray-900 sm:w-64 sm:flex-none sm:pr-6">Email address</dt>
               <dd class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto">
                 <div class="text-gray-900">{{current_user.email}}</div>
+                <button id = "openEmailSetting-button" type="button" class="font-semibold text-blue-900 hover:text-blue-800">Update</button>
               </dd>
             </div>
             <div class="pt-6 sm:flex">
               <dt class="font-medium text-gray-900 sm:w-64 sm:flex-none sm:pr-6">Phone Number</dt>
               <dd class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto">
                 <div class="text-gray-900">{{current_user.phone}}</div>
+                <button id = "openPhoneSetting-button" type="button" class="font-semibold text-blue-900 hover:text-blue-800">Update</button>
               </dd>
             </div>
             <div class="pt-6 sm:flex">
               <dt class="font-medium text-gray-900 sm:w-64 sm:flex-none sm:pr-6">Birthday</dt>
               <dd class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto">
                 <div class="text-gray-900">{{current_user.birthday}}</div>
+                <button id = "openBirthdaySetting-button" type="button" class="font-semibold text-blue-900 hover:text-blue-800">Update</button>
               </dd>
             </div>
             <!-- <div class="pt-6 sm:flex">
@@ -254,7 +242,7 @@
 
         <div class = "py-4">
           <form class="flex items-start justify-end">
-            <button type="submit" class="rounded-md bg-red-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-400">Add Asset</button>
+            <button type="submit" class="rounded-md bg-red-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-400">Delete account</button>
           </form>
         </div>
         
@@ -282,7 +270,47 @@
           
     </div> -->
 
-  
+   
+
+    <script>
+      function closeSettingMenu(attribute) {
+          const settingmenu = document.querySelector(attribute);
+          if (settingmenu.classList.contains('hidden')) {
+            settingmenu.classList.remove('hidden');
+          } else {
+            settingmenu.classList.add('hidden');
+          }
+      }
+
+      function openSettingMenu(menuSelector) {
+          const settingmenu = document.querySelector(menuSelector);
+          if (settingmenu.classList.contains('hidden')) {
+            settingmenu.classList.remove('hidden');
+          } else {
+            settingmenu.classList.add('hidden');
+          }
+      }
+
+      const openNameSettingButton = document.getElementById('openNameSetting-button');
+      openNameSettingButton.addEventListener('click', function() {openSettingMenu(".settingname");});
+      const cancelSettingButton = document.getElementById('cancelname-button');
+      cancelSettingButton.addEventListener('click', function() {closeSettingMenu(".settingname");});
+
+      const openEmailSettingButton = document.getElementById('openEmailSetting-button');
+      openEmailSettingButton.addEventListener('click', function() {openSettingMenu(".settingemail");});
+      const cancelEmailButton = document.getElementById('cancelemail-button');
+      cancelEmailButton.addEventListener('click', function() {closeSettingMenu(".settingemail");});
+
+      const openPhoneSettingButton = document.getElementById('openPhoneSetting-button');
+      openPhoneSettingButton.addEventListener('click', function() {openSettingMenu(".settingphone");});
+      const cancelPhoneButton = document.getElementById('cancelphone-button');
+      cancelPhoneButton.addEventListener('click', function() {closeSettingMenu(".settingphone");});
+
+      const openBirthdaySettingButton = document.getElementById('openBirthdaySetting-button');
+      openBirthdaySettingButton.addEventListener('click', function() {openSettingMenu(".settingbirthday");});
+      const cancelBirthdayButton = document.getElementById('cancelbirthday-button');
+      cancelBirthdayButton.addEventListener('click', function() {closeSettingMenu(".settingbirthday");});
+  </script>
 
     </div>
   </div>

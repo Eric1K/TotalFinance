@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, flash, redirect, request
 from flaskmain import application, db, bcrypt
 from flaskmain.models import Users, updateNetWorth
-from flaskmain.forms import RegistrationForm, LoginForm
+from flaskmain.forms import RegistrationForm, LoginForm, AssetListForm
 from flask_login import login_user, current_user, logout_user, login_required
 
 data = [
@@ -114,4 +114,5 @@ def security():
 @application.route("/assetlist")
 @login_required
 def assetlist():
-    return render_template("assetlist.html", title ="Assetlist")
+    form = AssetListForm()
+    return render_template("assetlist.html", title ="Assetlist", form=form)
