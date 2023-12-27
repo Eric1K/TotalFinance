@@ -115,54 +115,40 @@
   </div>
 </div>
 
-<div class="mx-auto max-w-7xl pt-10 lg:flex lg:gap-x-10 lg:px-8">
+<div class="mx-auto max-w-7xl sm:pt-10 pt-0 lg:flex lg:gap-x-10 lg:px-8">
   <main class="px-4 py-16 sm:px-6 lg:flex-auto lg:px-0 lg:py-20">
     <div class="mx-auto max-w-2xl space-y-16 sm:space-y-20 lg:mx-0 lg:max-w-none">
       <div>
         <h2 class="text-2xl font-semibold leading-7 text-gray-900">Asset List</h2>
-
-        <!--<dl class="mt-6 space-y-6 divide-y divide-gray-100 border-t border-gray-200 text-sm leading-6">
-          <div class="pt-6 sm:flex">
-            <dt class="font-medium text-gray-900 sm:w-64 sm:flex-none sm:pr-6">Asset 1</dt>
-            <dd class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto">
-              <div class="text-gray-900">{{current_user.assettype}}</div>
-              <button id = "openNameSetting-button" type="button" class="font-semibold text-blue-900 hover:text-blue-800">Update</button>
-            </dd>
-          </div>
-        </dl> -->
+        
+        <!-- Bank Accounts Table -->
         <table class="mt-6 w-full whitespace-nowrap text-left">
           <colgroup>
-            <!-- <col class="w-full sm:w-4/12">
-            <col class="lg:w-4/12">
-            <col class="lg:w-2/12">
-            <col class="lg:w-1/12">
-            <col class="lg:w-1/12"> -->
+            <col class="lg:w-1/4">
+            <col class="lg:w-1/4">
+            <col class="lg:w-1/4">
+            <col class="lg:w-1/4">
           </colgroup>
           <thead class="border-b border-gray-500 text-sm leading-6 text-black">
             <tr>
-              <th scope="col" class="py-2 pl-4 pr-8 font-semibold sm:pl-6 lg:pl-8">Bank Accounts</th>
-              <th scope="col" class="py-2 pl-0 pr-8 font-semibold sm:table-cell">Name</th>
-              <th scope="col" class="py-2 pl-0 pr-4 text-left font-semibold sm:pr-8 sm:text-left lg:pr-20">Type</th>
+              <th scope="col" class="hidden sm:table-cell py-2 pl-4 pr-8 font-semibold sm:pl-6 lg:pl-8">Accounts</th>
+              <th scope="col" class="py-2 pl-0 pr-8 font-semibold">Name</th>
               <th scope="col" class="py-2 pl-0 pr-8 font-semibold md:table-cell lg:pr-20">Value</th>
-              <th scope="col" class="py-2 pl-0 pr-4 text-right font-semibold sm:table-cell sm:pr-6 lg:pr-8">Deployed at</th>
+              <!-- <th scope="col" class="py-2 pl-0 pr-4 text-right font-semibold sm:table-cell sm:pr-6 lg:pr-8">empty</th> -->
             </tr>
           </thead>
+
           <tbody class="divide-y divide-white/5">
             <tr>
-              <td class="py-4 pl-4 pr-8 sm:pl-6 lg:pl-8 ">
-                <div class="flex items-center gap-x-4">
-                  <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-sm font-medium text-black ring-1 ring-inset ring-gray-400/20">Account 1</span>
+              <td class="hidden sm:table-cell py-4 pl-4 pr-8 sm:pl-6 lg:pl-8 ">
+                <div class="flex gap-x-3">
+                  <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-sm font-medium text-blue-900 ring-1 ring-inset ring-gray-400/20">Bank Account</span>
                 </div>
               </td>
-              <td class=" py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
+              <td class="py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
                 <div class="flex gap-x-3">
                   <div class="text-sm leading-6 text-black">Savings Account</div>
                   <!-- <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20">Bank Account</span> -->
-                </div>
-              </td>
-              <td class="py-4 pl-0 pr-4 text-sm leading-6 sm:pr-8 lg:pr-20">
-                <div class="flex gap-x-3">
-                  <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-sm font-medium text-blue-900 ring-1 ring-inset ring-gray-400/20">Bank Account</span>
                 </div>
               </td>
               <td class="py-4 pl-0 pr-8 text-sm leading-6 md:table-cell lg:pr-20">
@@ -170,21 +156,165 @@
                   <div class="font-mono text-sm leading-6 text-black">$83,679.34</div>
                 </div>
               </td>
-              <td class="py-4 pl-0 pr-4 text-right text-sm leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8">
-                <time datetime="2023-01-23T11:00">45 minutes ago</time>
+              <td class="py-4 pl-0 pr-4 text-right text-sm leading-6 sm:table-cell sm:pr-6 lg:pr-8">
+                <button type="button" class="relative ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2">
+                  <span class="absolute -inset-1.5"></span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 icon icon-tabler icon-tabler-pencil" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4"></path>
+                    <path d="M13.5 6.5l4 4"></path>
+                  </svg>
+                </button>
               </td>
             </tr>
             
-            <!-- More items... -->
+            <!-- More items to add in Flask... -->
           </tbody>
+
+          
+          
         </table>
+        <div class = "py-4 text-right">
+          <button type="submit" class="rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-400">Add Account</button>
+        </div>
+        <!-- Collections Table -->
+        <table class="mt-6 w-full whitespace-nowrap text-left">
+          <colgroup>
+            <col class="lg:w-1/4">
+            <col class="lg:w-1/4">
+            <col class="lg:w-1/4">
+            <col class="lg:w-1/4">
+          </colgroup>
+          <thead class="border-b border-gray-500 text-sm leading-6 text-black">
+            <tr>
+              <th scope="col" class="hidden sm:table-cell py-2 pl-4 pr-8 font-semibold sm:pl-6 lg:pl-8">Accounts</th>
+              <th scope="col" class="py-2 pl-0 pr-8 font-semibold">Name</th>
+              <th scope="col" class="py-2 pl-0 pr-8 font-semibold">Value</th>
+              <!-- <th scope="col" class="py-2 pl-0 pr-4 text-right font-semibold sm:table-cell sm:pr-6 lg:pr-8">empty</th> -->
+            </tr>
+          </thead>
+
+          <tbody class="divide-y divide-white/5">
+            <tr>
+              <td class="hidden sm:table-cell py-4 pl-4 pr-8 sm:pl-6 lg:pl-8 ">
+                <div class="flex gap-x-3">
+                  <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-sm font-medium text-green-600 ring-1 ring-inset ring-gray-400/20">Investment Account</span>
+                </div>
+              </td>
+              <td class="py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
+                <div class="flex gap-x-3">
+                  <div class="text-sm leading-6 text-black">Fidelity Account</div>
+                  <!-- <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20">Bank Account</span> -->
+                </div>
+              </td>
+              <td class="py-4 pl-0 pr-8 text-sm leading-6 md:table-cell lg:pr-20">
+                <div class="flex gap-x-3">
+                  <div class="font-mono text-sm leading-6 text-black">$3,231.12</div>
+                </div>
+              </td>
+              <td class="py-4 pl-0 pr-4 text-right text-sm leading-6 sm:table-cell sm:pr-6 lg:pr-8">
+                <button type="button" class="relative ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2">
+                  <span class="absolute -inset-1.5"></span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 icon icon-tabler icon-tabler-pencil" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4"></path>
+                    <path d="M13.5 6.5l4 4"></path>
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            
+            <!-- Add Stocks... -->
+            
+          </tbody>
+
+          
+          
+        </table>
+
+        <div class = "overflow-x-auto sm:overflow-hidden py-4">
+          <table class="ml-2 w-full whitespace-nowrap text-left">
+            <colgroup>
+              <col class="lg:w-1/12">
+              
+            </colgroup>
+            <thead class= "text-sm leading-6 text-black">
+              <tr>
+                <th scope="col" class="hidden sm:table-cell pl-4 pr-8 font-semibold sm:pl-6 lg:pl-8">Type</th>
+                <th scope="col" class="pl-0 pr-8 font-semibold">Name</th>
+                <th scope="col" class="pl-0 pr-8 font-semibold">Type</th>
+                <th scope="col" class="pl-0 pr-8 font-semibold">Quantity</th>
+                <th scope="col" class="pl-0 pr-8 font-semibold">Value</th>
+                <th scope="col" class="pl-0 pr-8 font-semibold">Purchase Cost</th>
+                <th scope="col" class="pl-0 pr-8 font-semibold">Purchase Date</th>
+                <!-- <th scope="col" class="py-2 pl-0 pr-4 text-right font-semibold sm:table-cell sm:pr-6 lg:pr-8">empty</th> -->
+              </tr>
+            </thead>
+  
+            <tbody class="divide-y divide-white/5">
+              <tr>
+                <td class="hidden sm:table-cell pl-4 pr-8 sm:pl-6 lg:pl-8 ">
+                  <div class="flex gap-x-3">
+                    <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-sm font-medium text-green-800 ring-1 ring-inset ring-gray-400/20">Stock</span>
+                  </div>
+                </td>
+                <td class="pl-0 pr-4 sm:table-cell sm:pr-8">
+                  <div class="flex gap-x-3">
+                    <div class="text-sm leading-6 text-black">NVDA</div>
+                    <!-- <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20">Bank Account</span> -->
+                  </div>
+                </td>
+                <td class="pl-0 pr-4 sm:table-cell sm:pr-8">
+                  <div class="flex gap-x-3">
+                    <div class="text-sm leading-6 text-black">Stock</div>
+                  </div>
+                </td>
+                <td class="pl-0 pr-4 sm:table-cell sm:pr-8">
+                  <div class="flex gap-x-3">
+                    <div class="text-sm leading-6 text-black">1</div>
+                  </div>
+                </td>
+                <td class="pl-0 pr-4 sm:table-cell sm:pr-8">
+                  <div class="flex gap-x-3">
+                    <div class="text-sm leading-6 text-black">$492.79</div>
+                  </div>
+                </td>
+                <td class="pl-0 pr-4 sm:table-cell sm:pr-8">
+                  <div class="flex gap-x-3">
+                    <div class="text-sm leading-6 text-black">$400.00</div>
+                  </div>
+                </td>
+                <td class="pl-0 pr-4 sm:table-cell sm:pr-8">
+                  <div class="flex gap-x-3">
+                    <div class="text-sm leading-6 text-black">09/19/2023</div>
+                  </div>
+                </td>
+                <td class="pl-0 pr-4 text-right text-sm leading-6 sm:table-cell sm:pr-6 lg:pr-8">
+                  <button type="button" class="relative ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2">
+                    <span class="absolute -inset-1.5"></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 icon icon-tabler icon-tabler-pencil" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4"></path>
+                      <path d="M13.5 6.5l4 4"></path>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              
+              <!-- Add Stocks... -->
+              
+            </tbody>
+          </table>
+        </div>
+        
+        <div class = "py-4 text-right">
+          <button type="submit" class="rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-400">Add Account</button>
+        </div>
+        
+         
       </div>
       <div>
-      <div class = "py-4">
-        <form class="flex items-start justify-end">
-          <button type="submit" class="rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-400">Add Asset</button>
-        </form>
-      </div>
+      
 
     </div>
     
