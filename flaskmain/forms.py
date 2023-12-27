@@ -32,6 +32,7 @@ class AssetListForm(FlaskForm):
     assetname = StringField("Asset Name", validators = [DataRequired()]) 
     assetvalue = FloatField("Asset Value", validators = [DataRequired()])
     assetprice = FloatField("Asset Price", validators = [DataRequired()])
+    assetquant = FloatField("Asset Quantity", validators = [DataRequired()])
     doa = StringField("Date of Acquisition", validators = [DataRequired()])
 
 
@@ -61,4 +62,3 @@ class SettingPhoneForm(FlaskForm):
 class SettingDOBForm(FlaskForm):
     birthday = DateField("Date of Birth", validators=[DataRequired()])
     submit = SubmitField("Confirm Birthday")
-
