@@ -114,35 +114,82 @@
     </div>
   </div>
 </div>
-  <div class="mx-auto max-w-7xl pt-16 lg:flex lg:gap-x-16 lg:px-8">
-  
-    <main class="px-4 py-16 sm:px-6 lg:flex-auto lg:px-0 lg:py-20">
-      <div class="mx-auto max-w-2xl space-y-16 sm:space-y-20 lg:mx-0 lg:max-w-none">
-        <div>
-          <h2 class="text-2xl font-semibold leading-7 text-gray-900">Asset List</h2>
-  
-          <dl class="mt-6 space-y-6 divide-y divide-gray-100 border-t border-gray-200 text-sm leading-6">
-            <div class="pt-6 sm:flex">
-              <dt class="font-medium text-gray-900 sm:w-64 sm:flex-none sm:pr-6">Asset 1</dt>
-              <dd class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto">
-                <div class="text-gray-900">{{current_user.assettype}}</div>
-                <button id = "openNameSetting-button" type="button" class="font-semibold text-blue-900 hover:text-blue-800">Update</button>
-              </dd>
-            </div>
-          </dl>
-        </div>
-  
-        <div>
-        <div class = "py-4">
-          <form class="flex items-start justify-end">
-            <button type="submit" class="rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-400">Add Asset</button>
-          </form>
-        </div>
-        
 
+<div class="mx-auto max-w-7xl pt-10 lg:flex lg:gap-x-10 lg:px-8">
+  <main class="px-4 py-16 sm:px-6 lg:flex-auto lg:px-0 lg:py-20">
+    <div class="mx-auto max-w-2xl space-y-16 sm:space-y-20 lg:mx-0 lg:max-w-none">
+      <div>
+        <h2 class="text-2xl font-semibold leading-7 text-gray-900">Asset List</h2>
+
+        <!--<dl class="mt-6 space-y-6 divide-y divide-gray-100 border-t border-gray-200 text-sm leading-6">
+          <div class="pt-6 sm:flex">
+            <dt class="font-medium text-gray-900 sm:w-64 sm:flex-none sm:pr-6">Asset 1</dt>
+            <dd class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto">
+              <div class="text-gray-900">{{current_user.assettype}}</div>
+              <button id = "openNameSetting-button" type="button" class="font-semibold text-blue-900 hover:text-blue-800">Update</button>
+            </dd>
+          </div>
+        </dl> -->
+        <table class="mt-6 w-full whitespace-nowrap text-left">
+          <colgroup>
+            <!-- <col class="w-full sm:w-4/12">
+            <col class="lg:w-4/12">
+            <col class="lg:w-2/12">
+            <col class="lg:w-1/12">
+            <col class="lg:w-1/12"> -->
+          </colgroup>
+          <thead class="border-b border-gray-500 text-sm leading-6 text-black">
+            <tr>
+              <th scope="col" class="py-2 pl-4 pr-8 font-semibold sm:pl-6 lg:pl-8">Bank Accounts</th>
+              <th scope="col" class="py-2 pl-0 pr-8 font-semibold sm:table-cell">Name</th>
+              <th scope="col" class="py-2 pl-0 pr-4 text-left font-semibold sm:pr-8 sm:text-left lg:pr-20">Type</th>
+              <th scope="col" class="py-2 pl-0 pr-8 font-semibold md:table-cell lg:pr-20">Value</th>
+              <th scope="col" class="py-2 pl-0 pr-4 text-right font-semibold sm:table-cell sm:pr-6 lg:pr-8">Deployed at</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5">
+            <tr>
+              <td class="py-4 pl-4 pr-8 sm:pl-6 lg:pl-8 ">
+                <div class="flex items-center gap-x-4">
+                  <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-sm font-medium text-black ring-1 ring-inset ring-gray-400/20">Account 1</span>
+                </div>
+              </td>
+              <td class=" py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
+                <div class="flex gap-x-3">
+                  <div class="text-sm leading-6 text-black">Savings Account</div>
+                  <!-- <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20">Bank Account</span> -->
+                </div>
+              </td>
+              <td class="py-4 pl-0 pr-4 text-sm leading-6 sm:pr-8 lg:pr-20">
+                <div class="flex gap-x-3">
+                  <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-sm font-medium text-blue-900 ring-1 ring-inset ring-gray-400/20">Bank Account</span>
+                </div>
+              </td>
+              <td class="py-4 pl-0 pr-8 text-sm leading-6 md:table-cell lg:pr-20">
+                <div class="flex gap-x-3">
+                  <div class="font-mono text-sm leading-6 text-black">$83,679.34</div>
+                </div>
+              </td>
+              <td class="py-4 pl-0 pr-4 text-right text-sm leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8">
+                <time datetime="2023-01-23T11:00">45 minutes ago</time>
+              </td>
+            </tr>
+            
+            <!-- More items... -->
+          </tbody>
+        </table>
       </div>
-    </main>
-  </div>
+      <div>
+      <div class = "py-4">
+        <form class="flex items-start justify-end">
+          <button type="submit" class="rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-400">Add Asset</button>
+        </form>
+      </div>
+
+    </div>
+    
+  </main>
+</div>
 
    
     
@@ -150,18 +197,6 @@
       
    
 
-    
-    
-    <!-- <div class="py-10">
-      <header>
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 class="text-3xl font-bold leading-tight tracking-tight text-gray-900">Dashboard</h1>
-        </div>
-      </header>
-      <main>
-        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-          
-    </div> -->
 
    
 
