@@ -6,6 +6,7 @@ Developed by Eric Feng (Penn State) & Tejas Balaji (Georgia Tech)
 ### About this project:
 - A full-stack AI financial chatbot web application built on Flask serving a REST API with TailwindCSS
 - Includes registration/login system and payments through Stripe
+- Deployed on Amazon (AWS) Elastic Beanstalk
 
   
 
